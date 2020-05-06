@@ -1,0 +1,92 @@
+@import '../../styles/common.less';
+
+.mainMenuContainer {
+  width: 260px;
+  height: 100vh;
+  position: relative;
+  overflow-y: scroll;
+  transition: width 0.3s ease-in-out;
+}
+
+.mainTitle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 30px;
+  color: #7cb305;
+  cursor: default;
+  padding-bottom: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+}
+
+.itemWrap {
+  height: 60px;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.itemContainer {
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+  background: linear-gradient(to right, transparent 50%, #fafafa 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all 0.5s ease;
+
+  &:hover div {
+    color: rgba(140, 140, 140, 0.9);
+  }
+}
+
+.itemIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 23px;
+}
+
+.activeItem {
+  background-position: right bottom;
+}
+
+.diver {
+  border-right: 1px #f0f0f0 solid;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.tipBar {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  left: -5px;
+  top: 0;
+  z-index: 1;
+  background-color: #bae637;
+  transition: left ease 0.5s;
+}
+
+.mainTitleTxt {
+  color: rgba(140, 140, 140, 0.9);
+}
+
+.fakerBlock {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 75px;
+  height: 100%;
+  z-index: 1;
+}
