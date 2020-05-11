@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import className from 'classnames';
+import Search from './Search';
 import Card from './Card';
 import styles from './style.less';
 
@@ -19,6 +20,9 @@ const SubMenu = () => {
           onClick={() => setIndex(1)}
         >
           <div className={styles.category}>Popular</div>
+        </div>
+        <div className={styles.commonTitle} style={{ flex: 1, justifyContent: 'flex-end' }}>
+          <Search />
         </div>
         <div className={styles.underline}></div>
       </div>
